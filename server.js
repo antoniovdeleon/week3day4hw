@@ -52,29 +52,6 @@ app.post('/api/phrases', function (req, res) {
   res.json(newPhrase);
 });
 
-///////////////////////
-var testing = function(){
-  app.post('/api/phrases', function (req, res) {
-    
-    // set sequential id (last id in `phrases` array + 1)
-    if (phrases.length > 0) {
-      newPhrase.id = phrases[phrases.length - 1].id +  1;
-    } else {
-      newPhrase.id = 0;
-    }
-
-    var testing = "cat"
-    console.log(testing)
-
-    // add newPhrase to `phrases` array
-    phrases.push(testing);
-    
-    // send newPhrase as JSON response
-    res.json(testing);
-  });
-};
-testing();
-//////////////////////////
 
 // update phrase
 app.put('/api/phrases/:id', function(req, res) {

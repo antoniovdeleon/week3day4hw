@@ -49,8 +49,8 @@ describe('/api/phrases/', function() {
   });
 });
 
-describe('test to see if it has an a called string--', function() {
-  it('test to see if it has a string that we call--', function(done) {
+describe('phrases', function() {
+  it('test to see if word dummy and definiton dun person is added', function(done) {
    request.post('http://localhost:3000/api/phrases', {form:{ id:"33",word: "dummy", definition:" dun person" }}, function(err, res, body) {
         expect(body).to.have.string("dummy");
         //expect(res.statusCode).to.equal(200);
